@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="hero-section">
+      <div class="container hero-section-container">
+        <h1>Introduction to DOM</h1>
+        <h1>Het</h1>
+        <h2 id="secondary-text">Let's learn DOM</h2>
+        <p class="description-text">Hi there, hope everyone is learns</p>
+        <p class="para">This is Just p</p>
+        <div class="text-container">
+          <p class="para">This is first text</p>
+          <p class="para">This is second text</p>
+          <p class="para">This is third text</p>
+          <p class="para">This is fourth texts</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const div=document.getElementById("hero-section")
+    console.log("Access the div by ID",div)
+    // div.innerText="Hey Prawish"//--change the div element
+    const className=document.getElementsByClassName("container")
+    console.log("Access the div by classname",className) //class name haru list ma aaucha
+    const heading=document.getElementsByTagName("h1")[0]
+    // heading.innerHTML="Welcome to DOM"-- We can also change h1
+    console.log("Access the h1 by Name",heading)
+  </script>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 3. addEventListener() -->
+    <button id="my-button">Click me</button>
+    <button id="my-button-1">Click me-2</button>
+  </body>
+  <script>
+    const btn = document.getElementById("my-button");
+    // click matra lekhu parxa agadi ko on remove like html attribute ma lekheko
+    btn.addEventListener("click", function () {
+      console.log("This is from addEventListener ");
+    });
+    const btn1 = document.getElementById("my-button-1");
+    function doSomething() {
+      console.log("Yo chai function bahira rakhera");
+    }
+    btn1.addEventListener("click", doSomething);
+  </script>
+</html>

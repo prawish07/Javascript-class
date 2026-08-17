@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="my-button" onclick="changeBg()">Change Background</button>
+  </body>
+  <script>
+
+    // Back ground color change
+    const colorsList = ["red", "green", "blue", "cyan", "yellow"];
+    // const btn=document.getElementById("my-button")
+    function changeBg() {
+      let index = Math.floor(Math.random() * colorsList.length);
+      document.body.bgColor = colorsList[index];
+    }
+  </script>
+</html>

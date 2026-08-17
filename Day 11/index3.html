@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="my-button">Click me</button>
+    <button id="button" onclick="doSomething()">New Function</button>
+  </body>
+  <!-- From attribute property -->
+  <script>
+    const btn = document.getElementById("my-button");
+    btn.onclick = function () {
+      console.log("From attribute property-Click me");
+    };
+    function doSomething() {
+      console.log(
+        "This is from html attribute ma function call gareko from script",
+      );
+    }
+  </script>
+</html>
