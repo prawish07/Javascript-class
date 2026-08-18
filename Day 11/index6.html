@@ -6,8 +6,22 @@
     <title>Document</title>
   </head>
   <body>
-    <img
-      src="https://www.goal.com/en/lists/made-history-cristiano-ronaldo-promise-fans-hitting-unmatched-one-billion-milestone-social-media/blt8919c5b464f21bb5"
-    />
+    <img src="./noteicon.png" alt="" style="visibility: visible" />
+    <button id="my-button">Hide/Show</button>
   </body>
+  <script>
+    const btn = document.getElementById("my-button");
+    const image = document.getElementsByTagName("img")[0];
+    // console.log(image);
+
+    btn.addEventListener("click", function () {
+      if (image.style.visibility == "hidden") {
+        image.style.visibility = "visible";
+        btn.innerText="Hide Image"
+      } else {
+        image.style.visibility = "hidden";
+        btn.innerText="Show Image"
+      }
+    });
+  </script>
 </html>
