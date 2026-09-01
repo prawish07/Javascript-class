@@ -7,7 +7,10 @@ closeBtn.addEventListener("click", ()=>{
 })
 // console.log(images)
 images.forEach((image) => {
-  image.addEventListener("click", showImageBox);
+  image.addEventListener("click",  showImageBox);
+  // console.log("Ddddd",image)
+
+  
 });
 function showImageBox() {
   console.log("This gives the click image source", this);
