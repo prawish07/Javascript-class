@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Open windows</button>
+</body>
+<script>
+ const btn=document.getElementById("btn")
+ btn.addEventListener("click", function(){
+    
+    window.open("https://google.com","","height=700,width=500")
+    // window open ko first param ma- link dinxa, kata khulne vanera direction dinxa
+    // like-self bhanesi tei tab ma khulxa or __blank bhanesi arko tab and 
+    // 3rd param le windows ko style dinxa
+ })
+</script>
+</html>
