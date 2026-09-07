@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- First method -->
+    <input type="text" id="field" onkeydown="keyDownFunction(event)" />
+    <!-- Second Method -->
+    <input type="text" id="field2" />
+    <!-- event lai short form ma lekhnu hudaina yesle --(e) vanera lidaina -->
+    <button id="add-button">Add</button>
+    <div id="items"></div>
+  </body>
+  <script>
+    const itemsDiv = document.getElementById("items");
+    const field2 = document.getElementById("field2");
+    const itemBtn = document.getElementById("add-button");
+    function keyDownFunction(e) {
+      console.log("This is from first method", e.target.value);
+      console.log("This is from first method", e);
+    }
+    itemBtn.addEventListener("click", addItems);
+    field2.addEventListener("keydown", function keydown(e) {
+      //   console.log("This is from 2nd ethod", e);
+      //   yesma e ko value j sukai diye ni huncha- in case of first
+      //   in case of first methosd input ma keydown attribute ma use garai xau
+      //   vane 'event ' use garnu parxa
+      if (e.key === "Enter") {
+        console.log("This is from Enter", field2.value);
+        addItems();
+      }
+    });
+    function addItems() {
+      if (field2.value) {
+        let li = document.createElement("li");
+        li.innerHTML = field2.value;
+        itemsDiv.append(li);
+        field2.value = "";
+      }
+    }
+  </script>
+</html>

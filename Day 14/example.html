@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea rows="5" cols="20" id="messageBox"></textarea>
+    <div id="status2" status-div></div>
+    <div id="status"></div>
+</body>
+<script>
+    const status2Div=document.querySelector("[status-div]")
+    console.log("From query selector",status2Div)//Yesle jasko attribute deko cha teslai
+    //  access garna lai yesari garnu- attribute bata set garna ko lagi
+    const messageBox=document.getElementById("messageBox")
+    const statusDiv=document.getElementById("status")
+    messageBox.addEventListener("keyup",(e)=>{
+        // console.log(e.key)
+        let words=messageBox.value.split(" ");
+        console.log("It includes space",words)
+        let word=words.filter((w)=>w !="")
+        console.log("It not includes space",word)
+       statusDiv.innerHTML=`<b>words count</b>: ${word.length}`
+    })
+</script>
+</html>
